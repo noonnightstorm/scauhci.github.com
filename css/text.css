@@ -697,7 +697,8 @@ keyframes swing{
 }
 .book-more-btn-row,.book-exit-btn-row{
 	display: inline-block;
-	width: 173px;
+	float: left;
+	width: 180px;
 }
 .book-more-img{
 	float: left;
