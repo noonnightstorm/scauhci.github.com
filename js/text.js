@@ -28,15 +28,9 @@ window.onload = function(){
     e.preventDefault();
     Book.start();
   });
-  $(".book-item").click(function(){
-    Book.showOneBook();
-  });
-  $(".book-exit-btn").click(function(){
-    Book.hideOneBook();
-  });
-  $(".back-menu").click(function(){
-    Book.disappear();
-  });
+  $(".book-item").click(Book.showOneBook);
+  $(".book-exit-btn").click(Book.hideOneBook);
+  $(".back-menu").click(Book.disappear);
   
   /*loading*/
   $("#submit").click(function(){
