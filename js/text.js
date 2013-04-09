@@ -123,11 +123,22 @@ var Book = {
     },60);
   },
   showOneBook : function(){
-    $("#book").css({
+    var book = $("#book");
+    /*init data*/
+    $(book).find(".book-title").text("Test");
+    $(book).find(".book-feature").text("test");
+    $(book).find(".book-date").text("test");
+    $(book).find(".book-img").attr("src");
+    $(book).find(".book-introduction-content").text("test");
+    $(book).find(".book-impression-content").text("test");
+    $(book).find(".book-participate-item").text("xxx xxx");
+
+    /*begin animate*/
+    $(book).css({
       "width" : "0px",
       "display": "block"
     });
-    $("#book").animate({"width":"1100px"},800);
+    $(book).animate({"width":"1100px"},800);
   },
   hideOneBook : function(){
     Book.init();
