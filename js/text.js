@@ -61,6 +61,9 @@ window.onload = function(){
 
   /*加载优秀成员的图片*/
   initImg();
+
+  /*加载优秀项目*/
+  //InitExcellentProject.init();
 }
 
 var Book = {
@@ -102,7 +105,7 @@ var Book = {
       }
       var item = items[i];
       var index = i+3;
-      $(item).attr("id","book-item"+i);
+      //$(item).attr("id","book-item"+i);
       if ( $.browser.msie && $.browser.version<9.0 ) {
         $("#book-item"+i).css({
           "top":parseInt(540-400*Math.sin(index*12*Math.PI/180))+"px",
@@ -144,6 +147,46 @@ var Book = {
     $(".prologue").animate({"opacity":"1","filter":"alpha(opacity=100)"},750);
   }
 };
+
+var InitExcellentProject = {
+  objs : [],
+  init : function(){
+    InitExcellentProject.resolveData(0);
+  },
+  sendRequest : function(){
+    $.ajax({
+      url : "",
+      type : "get",
+      dataType : "json",
+      data : {},
+      success : function(data){
+        InitExcellentProject.objs = data;
+        InitExcellentProject.resolveData(0);
+      },
+      error : function(err){
+        alert("优秀项目加载失败");
+      }
+    });
+  },
+  resolveData : function(num,obj){
+    var node = $("#book-item"+num);
+    /*obj.url*/
+    $(node).find(".book-item-aside").text("test");
+    /*obj.author*/
+    $(node).find(".book-item-author").text("test");
+    /*obj.name*/
+    $(node).find(".book-item-title").text("test");
+
+    var character = $(node).find(".book-item-content");
+    /*obj.character1*/
+    $(character[0]).text("test");
+    /*obj.character2*/
+    $(character[1]).text("test");
+    /*obj.character3*/
+    $(character[2]).text("test");
+  }
+};
+
 
 var LoginBox = {
   count : 0,
