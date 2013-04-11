@@ -57,7 +57,7 @@ window.onload = function(){
   initImg();
 
   /*加载优秀项目*/
-  //InitExcellentProject.init();
+  InitExcellentProject.init();
 }
 
 var Book = {
@@ -189,6 +189,11 @@ var InitExcellentProject = {
     $(character[1]).text("test");
     /*obj.character3*/
     $(character[2]).text("test");
+    //objs.name
+    for(var i=0,len=5;i<len;i++){
+      var p_node = $("<p></p>");
+      $(p_node).text("helloworld").appendTo($(".prologue-content-project"));
+    }
   }
 };
 

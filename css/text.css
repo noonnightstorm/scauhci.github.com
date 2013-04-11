@@ -589,6 +589,7 @@ keyframes swing{
 }
 .project-more{
 	position: absolute;
+	font-size: 26px;
 	bottom: 20px;
 	right:20px;
 	color: #fff;
